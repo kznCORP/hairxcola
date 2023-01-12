@@ -1,0 +1,108 @@
+.serviceContainer {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    ". img service"
+    "info img service";
+}
+
+.serviceDescription {
+  grid-area: info;
+  padding: 0 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  // border: 1px solid green;
+}
+
+.serviceTitle {
+  margin: 0 auto;
+  width: 100%;
+  text-align: flex-start;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #7a4b14;
+
+  // border: 1px solid teal;
+}
+
+.serviceSlogan {
+  margin-top: 1em;
+  width: 100%;
+  text-align: flex-start;
+  font-size: 1em;
+  font-weight: 600;
+  color: #7a4b14;
+  opacity: 0.5;
+
+  // border: 1px solid teal;
+}
+
+.serviceInfo {
+  margin: 1em;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  text-align: justify;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  // border: 1px solid green;
+}
+
+.duration,
+.price {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.serviceImageWrapper {
+  grid-area: img;
+  padding: 5em 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceImg {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 0.5em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.bookNowWrapper {
+  grid-area: info;
+  width: 100%;
+  margin-top: 2em;
+
+  // border: 1px solid orange;
+}
+
+.bookNow {
+  width: 100%;
+  padding: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 0.75em;
+}
+
+.arrow {
+  margin-left: 1em;
+}

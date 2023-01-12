@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+
+  z-index: 10;
+}
+
+.headerIcons {
+  width: 0.9em;
+  height: auto;
+}
+
+.headerBtn {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  cursor: pointer;
+}
+
+.ig {
+  justify-content: flex-start;
+}
+
+.gv {
+  justify-content: flex-end;
+}
+
+.instagram,
+.gridView {
+  padding: 0 1em;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #7a4b14;
+}
+.title {
+  padding: 2em;
+  font-size: 1em;
+  font-weight: 600;
+  color: #7a4b14;
+  text-transform: uppercase;
+  cursor: pointer;
+}

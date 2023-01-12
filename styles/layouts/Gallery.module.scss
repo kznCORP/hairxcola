@@ -1,0 +1,60 @@
+.scrollableGallery {
+  grid-area: service;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  gap: 0.25em;
+}
+
+.galleryImageWrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  z-index: 1;
+}
+
+.galleryTitle:hover {
+  z-index: -1;
+}
+
+.galleryTitle {
+  position: absolute;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
