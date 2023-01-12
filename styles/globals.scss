@@ -23,16 +23,6 @@ li {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: #fffbf3;
-    background: black;
-  }
-}
-
 // Fonts
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 @import url("https://fonts.cdnfonts.com/css/bagnolia");
