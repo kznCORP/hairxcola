@@ -16,7 +16,7 @@ export const Meta = () => {
 
       <link rel="icon" href="" />
 
-      <title>Nicola Narido | Hair Stylist</title>
+      <title>Nicola Narido • Hair Stylist </title>
     </Head>
   );
 };

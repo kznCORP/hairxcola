@@ -15,7 +15,8 @@
   height: auto;
 }
 
-.headerBtn {
+.headerBtn,
+.titleWrapper {
   display: flex;
   align-items: center;
   padding: 2em;
@@ -38,10 +39,29 @@
   color: #7a4b14;
 }
 .title {
-  padding: 2em;
+  height: 100%;
   font-size: 1em;
   font-weight: 600;
   color: #7a4b14;
   text-transform: uppercase;
-  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerBtn,
+  .titleWrapper {
+    padding: 1.5em;
+  }
+  .title {
+    font-size: 0.75em;
+  }
+
+  .instagram,
+  .gridView {
+    font-size: 0.5em;
+  }
+
+  .headerIcons {
+    width: 0.5em;
+    height: auto;
+  }
 }

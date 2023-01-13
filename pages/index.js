@@ -10,12 +10,12 @@ import Gallery from "../src/layouts/Gallery";
 import Footer from "../src/layouts/Footer";
 
 /*
-*
-* [ ] Deploy to Vercel
-* [ ] Mobile responsiveness
-* [ ] Grid View
-*
-*/ 
+ *
+ * [x] Deploy to Vercel
+ * [x] Mobile responsiveness / When finished, search each CSS file for "border"
+ * [ ] Grid View
+ *
+ */
 
 export const Home = ({ galleryProps, authorProps }) => {
   const [imageUrl, setImageUrl] = useState("");
