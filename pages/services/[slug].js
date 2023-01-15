@@ -42,7 +42,12 @@ export const Services = ({ currentServices, otherServices }) => {
           </div>
 
           <div className="bookNowWrapper">
-            <button className="bookNow">
+            <button
+              className="bookNow"
+              onClick={() =>
+                (window.location.href = "https://hairxcola.square.site/")
+              }
+            >
               <h3>Book an Appointment</h3>
               <Image src={Arrow} className="arrow" alt="Book now arrow icon." />
             </button>
