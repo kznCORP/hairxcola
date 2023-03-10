@@ -12,10 +12,14 @@ import Slogan from "../src/layouts/Slogan";
 import Footer from "../src/layouts/Footer";
 
 /*
- *
+ * Important
  * [x] Deploy to Vercel
  * [ ] When viewing from screens > 1560px, adjust padding.
- *
+ * [ ] Add links to every thing.
+ * [ ] Display image when hovering over Services.
+ * 
+ * Extras
+ * [ ] Add hover effects to horizontal scrolling
  */
 
 export const Home = ({ galleryResult, authorResult }) => {

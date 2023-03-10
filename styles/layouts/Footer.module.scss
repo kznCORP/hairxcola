@@ -1,26 +1,109 @@
 .footer {
-  position: fixed;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-
-  z-index: 10;
+  padding: 0 3em;
 }
 
-.footerText {
-  margin: 2em;
-  font-size: 0.85em;
-  font-weight: 600;
-  text-align: center;
-  color: #7a4b14;
-  border-bottom: 1px solid #7a4b14;
+.book-now-button {
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 10em;
+  border: 1px solid #222;
+  border-radius: 8em;
+}
+
+.book-text {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 3.25em;
+}
+
+.book:hover {
+  background-color: #222;
+  color: #fff;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-  .footer {
-    display: none;
+.book-text:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.available-payments {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payments {
+  width: 2.25em;
+}
+
+.payments img {
+  margin: 5em 0;
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard-wizard {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 200;
+  font-size: 0.75em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 576px) {
+  .footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 10em 0 1em 0;
+  }
+
+  .payments {
+    margin-right: 1em;
+  }
+
+  .payments img {
+    margin: 0;
+  }
+
+  .keyboard-wizard {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .book {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .book {
+    height: 15em;
+    width: 60%;
+  }
+
+  .book-text {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .book {
+    height: 17em;
+    width: 45%;
+  }
+
+  .book-text {
+    font-size: 5em;
   }
 }
