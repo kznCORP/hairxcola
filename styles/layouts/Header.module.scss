@@ -1,67 +1,102 @@
 .header {
-  position: fixed;
+  position: relative;
+  height: 75vh;
   width: 100vw;
   max-width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-
+  padding: 1.75em 1.5em;
   z-index: 10;
 }
 
-.headerIcons {
-  width: 0.9em;
-  height: auto;
+.header-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 2.75em;
+  line-height: 1em;
 }
 
-.headerBtn,
-.titleWrapper {
-  display: flex;
-  align-items: center;
-  padding: 2em;
-  cursor: pointer;
-}
-
-.ig {
-  justify-content: flex-start;
-}
-
-.gv {
-  justify-content: flex-end;
-}
-
-.instagram,
-.gridView {
-  padding: 0 1em;
-  font-size: 0.75em;
-  font-weight: 500;
-  color: #7a4b14;
-}
-.title {
-  height: 100%;
+.header-nav {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-size: 1em;
-  font-weight: 600;
-  color: #7a4b14;
-  text-transform: uppercase;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
-  .headerBtn,
-  .titleWrapper {
-    padding: 1.5em;
-  }
-  .title {
-    font-size: 0.75em;
+.header-menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.header-item {
+  margin: 2.5em 2.25em 0 0;
+  border-bottom: 0.5px solid #222;
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.header-item:last-child {
+  margin: 2.5em 0 0 0;
+}
+
+.header-slogan {
+  position: absolute;
+  top: 55%;
+}
+
+.available {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #77a888;
+}
+
+.header-book {
+  font-family: "Canela Trial", sans-serif;
+  font-size: 1.1em;
+  margin-top: 0.35em;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  border-bottom: 0.5px solid #222;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .header-title {
+    font-size: 3.5em;
   }
 
-  .instagram,
-  .gridView {
-    font-size: 0.5em;
+  .header-item {
+    margin: 2.5em 4em 0 0;
   }
 
-  .headerIcons {
-    width: 0.5em;
-    height: auto;
+  .header-book {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    padding: 3em;
+  }
+
+  .header-title {
+    font-size: 4.5em;
+    line-height: 0.9;
+  }
+
+  .header-item {
+    margin: 2.5em 6em 0 0;
+    font-size: 0.95em;
+  }
+
+  .header-slogan {
+    position: absolute;
+    padding: 5em 3em;
+    top: 0%;
+    right: 0%;
+  }
+
+  .available {
+    display: none;
   }
 }

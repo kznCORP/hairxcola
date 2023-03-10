@@ -1,0 +1,120 @@
+.my-services {
+  padding: 0 1.5em;
+  margin-bottom: 1em;
+}
+
+.ms-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+}
+
+.service {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  border-bottom: 1.25px dotted #7a4b14;
+}
+
+.service-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 300;
+  font-size: 1.15em;
+}
+
+.service-time,
+.service-price {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1em;
+  margin-top: 0.25em;
+  color: #7a4b14;
+}
+.service-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30%;
+}
+
+.duration {
+  width: 50%;
+}
+
+.price {
+  width: 40%;
+}
+
+.duration,
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.placeholder {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-size: 0.5em;
+  padding-bottom: 0.8em;
+  color: #7a4b14;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .service-title {
+    font-size: 1.5em;
+  }
+  .service-time,
+  .service-price {
+    font-size: 1.1em;
+  }
+
+  .service-category {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .my-services {
+    padding: 0 3em;
+  }
+
+  .ms-title {
+    font-size: 2em;
+  }
+
+  .service-title {
+    font-size: 1.5em;
+  }
+  .service-time,
+  .service-price {
+    font-size: 1.1em;
+  }
+
+  .service-category {
+    width: 15%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ms-title {
+    font-size: 2.75em;
+  }
+
+  .service-title {
+    font-size: 1.8em;
+  }
+  .service-time,
+  .service-price {
+    font-size: 1.25em;
+  }
+
+  .service-category {
+    width: 15%;
+  }
+}

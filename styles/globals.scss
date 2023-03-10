@@ -5,6 +5,7 @@ body {
   background-color: #fffbf3;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -12,9 +13,17 @@ a {
   text-decoration: none;
 }
 
-ul,
-li {
-  list-style: none;
+.horizontal-line {
+  width: 100%;
+  height: 0.25px;
+  margin: 1em 0 1.5em 0;
+  background-color: #7a4b14;
+}
+
+@media screen and (min-width: 992px) {
+  .horizontal-line {
+    margin: 1.5em 0 2em 0;
+  }
 }
 
 * {
@@ -25,13 +34,16 @@ li {
 
 // Fonts
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
-@import url("https://fonts.cdnfonts.com/css/bagnolia");
+@import url("https://fonts.cdnfonts.com/css/canela-text-trial");
 
 // Layout
 @import "./layouts/Header.module.scss";
 @import "./layouts/Gallery.module.scss";
 @import "./layouts/Footer.module.scss";
+@import "./layouts/SelectedWork.module.scss";
+@import "./layouts/Goal.module.scss";
+@import "./layouts/Services.module.scss";
+@import "./layouts/Slogan.module.scss";
 
 // Components
-@import "./components/Service.module.scss";
-@import "./components/GridView.module.scss";
+@import "./components/Index.module.scss";

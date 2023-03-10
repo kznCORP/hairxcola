@@ -1,64 +1,77 @@
-import React from "react";
+import React, { useState, useRef, useMemo } from "react";
 import SanityImageURLBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 
 export const Gallery = ({ posts }) => {
-  const router = useRouter();
   const [mappedServices, setMappedServices] = useState([]);
+  const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (posts.length) {
-      const imgBuilder = SanityImageURLBuilder({
+  //Image Builder for Sanity
+  const imgBuilder = useMemo(
+    () =>
+      SanityImageURLBuilder({
         projectId: "63zzpw0j",
         dataset: "production",
-      });
+      }),
+    []
+  );
 
+  useMemo(() => {
+    if (posts.length) {
       setMappedServices(
-        posts.map((service) => {
-          return {
-            ...service,
-            mainImage: imgBuilder.image(service.mainImage),
-          };
-        })
+        posts.map((service) => ({
+          ...service,
+          mainImage: imgBuilder.image(service.mainImage),
+        }))
       );
     } else {
       setMappedServices([]);
     }
-  }, [posts]);
+  }, [posts, imgBuilder]);
+
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    const startX = e.pageX - containerRef.current.offsetLeft;
+    const scrollLeft = containerRef.current.scrollLeft;
+
+    document.addEventListener("mousemove", handleMouseMove, { passive: true });
+    document.addEventListener("mouseup", handleMouseUp, { passive: true });
+
+    function handleMouseMove(e) {
+      const x = e.pageX - containerRef.current.offsetLeft;
+      const walk = (x - startX) * 2;
+      containerRef.current.scrollLeft = scrollLeft - walk;
+    }
+
+    function handleMouseUp() {
+      document.removeEventListener("mousemove", handleMouseMove, {
+        passive: true,
+      });
+      document.removeEventListener("mouseup", handleMouseUp, { passive: true });
+    }
+  };
 
   return (
-    <>
-      <div className="scrollableGallery">
-        <div className="gallery">
-          {mappedServices.length ? (
-            mappedServices.map((s, id) => {
-              return (
-                <>
-                  <div key={id} className="galleryImageWrapper">
-                    <div
-                      className="galleryTitle"
-                      onClick={() => router.push(`/services/${s.slug.current}`)}
-                    >
-                      {s.title}
-                    </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={s.mainImage}
-                      alt={`${s.title} image.`}
-                      className="galleryImg"
-                      onClick={() => router.push(`/services/${s.slug.current}`)}
-                    />
-                  </div>
-                </>
-              );
-            })
-          ) : (
-            <> No services available at this time. </>
-          )}
-        </div>
+    <div className="scrollableGallery">
+      <div className="gallery" ref={containerRef} onMouseDown={handleMouseDown}>
+        {mappedServices.length ? (
+          mappedServices.map((service) => (
+            <div className="gallery-horizontal" key={service._id}>
+              <div className="gallery-img-wrapper">
+                {/*eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={service.mainImage}
+                  alt={`${service.title} image.`}
+                  className="gallery-image"
+                />
+              </div>
+              <div className="gallery-title">{service.title}</div>
+            </div>
+          ))
+        ) : (
+          <p>No services available at this time.</p>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 

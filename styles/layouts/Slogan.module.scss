@@ -1,0 +1,44 @@
+.slogan {
+  width: 100vw;
+  height: 25em;
+  margin: 0 0 2em 0;
+  padding: 0 1.5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faIcon {
+  width: 2em;
+  color: #96ae96;
+}
+
+.slogan-description {
+  width: 100%;
+  padding: 1em;
+  font-family: "Canela Trial", sans-serif;
+  font-size: 1.75em;
+  font-weight: 200;
+  color: #7a4b14;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .slogan-description {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .slogan {
+    padding: 0 3em;
+  }
+
+  .slogan-description {
+    font-size: 2em;
+    width: 50%;
+  }
+}

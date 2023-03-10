@@ -1,0 +1,61 @@
+.selectedWork {
+  padding: 0 1.5em;
+}
+
+.sw-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+}
+
+.sw-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2em;
+}
+
+.sw-paragraph {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-size: 0.925em;
+  color: #7a4b14;
+  width: 65%;
+}
+
+.scroll {
+  width: 20%;
+  text-align: end;
+  color: #7a4b14;
+  opacity: 0.33;
+  font-family: "Canela Trial", sans-serif;
+  font-size: 0.7em;
+}
+
+/* Styles for Extra-Large Screens */
+@media (min-width: 992px) {
+  .selectedWork {
+    padding: 0 3em;
+  }
+
+  .sw-title {
+    font-size: 2em;
+  }
+
+  .sw-paragraph {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sw-title {
+    font-size: 2.75em;
+  }
+
+  .sw-paragraph {
+    font-size: 1.1em;
+  }
+
+  .scroll {
+    font-size: 1em;
+  }
+}

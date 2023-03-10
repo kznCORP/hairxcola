@@ -7,8 +7,6 @@ import Image from "next/image";
 import Gallery from "../../src/layouts/Gallery";
 import Footer from "../../src/layouts/Footer";
 
-import Arrow from "../../src/assets/arrow.svg";
-
 export const Services = ({ currentServices, otherServices }) => {
   const [imageUrl, setImageUrl] = useState("");
 
@@ -49,7 +47,6 @@ export const Services = ({ currentServices, otherServices }) => {
               }
             >
               <h3>Book an Appointment</h3>
-              <Image src={Arrow} className="arrow" alt="Book now arrow icon." />
             </button>
           </div>
         </div>
@@ -90,21 +87,28 @@ export const getServerSideProps = async (pageContext) => {
   const currentServiceURL = `https://63zzpw0j.api.sanity.io/v1/data/query/production?query=${currentServiceQuery}`;
   const otherServiceURL = `https://63zzpw0j.api.sanity.io/v1/data/query/production?query=${otherServiceQuery}`;
 
-  const currentServices = await fetch(currentServiceURL).then((res) =>
-    res.json()
-  );
-  const otherServices = await fetch(otherServiceURL).then((res) => res.json());
+  try {
+    const [currentServicesRes, otherServicesRes] = await Promise.all([
+      fetch(currentServiceURL),
+      fetch(otherServiceURL),
+    ]);
 
-  if (!currentServices) {
-    return {
-      notFound: true,
-    };
-  } else {
+    if (!currentServicesRes.ok || !otherServicesRes.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const currentServices = await currentServicesRes.json();
+    const otherServices = await otherServicesRes.json();
+
     return {
       props: {
         currentServices,
         otherServices,
       },
+    };
+  } catch (error) {
+    return {
+      notFound: true,
     };
   }
 };

@@ -1,67 +1,31 @@
 import { useRouter } from "next/router";
 
-import Image from "next/image";
-
-import Instagram from "../../src/assets/instagram.svg";
-import GridView from "../../src/assets/grid.svg";
-import GoBack from "../assets/go-back.svg";
-
 export const Header = () => {
   const router = useRouter();
 
   return (
     <header className="header">
-      <div
-        className="headerBtn ig"
-        onClick={() =>
-          window.open("https://instagram.com/hairxcola/", "_blank")
-        }
-      >
-        {/* Instagram Icon */}
-        <Image src={Instagram} className="headerIcons" alt="Instagram logo." />
-        <h3 className="instagram">Instagram</h3>
-      </div>
+      <h1 className="header-title">
+        Studio
+        <br />
+        Narido.
+      </h1>
+      <nav className="header-nav">
+        <ul className="header-menu">
+          <li className="header-item">About</li>
+          <li className="header-item">Services</li>
+          <li className="header-item">Blog</li>
+          <li className="header-item">FAQ</li>
+          <li className="header-item">Contact</li>
+        </ul>
+      </nav>
 
-      <div
-        className="titleWrapper"
-        onClick={() => (window.location.href = "/")}
-      >
-        <h1 className="title">Nicola Narido</h1>
-      </div>
-
-      <div
-        className="headerBtn gv"
-        onClick={() => router.push("/grid-view", null, { shallow: true })}
-      >
-        <h3 className="gridView">Grid View</h3>
-        <Image src={GridView} className="headerIcons" alt="Grid View logo." />
+      <div className="header-slogan">
+        <p className="available">Available Now</p>
+        <p className="header-book">Book for April Appointments Here.</p>
       </div>
     </header>
   );
 };
 
 export default Header;
-
-// {displayGrid ? (
-//   <>
-//     <h3
-//       className="gridView"
-//       onClick={() => {
-//         setDisplayGrid(false);
-//         router.back();
-//       }}
-//     >
-//       Back
-//     </h3>
-//     <Image src={GoBack} className="headerIcons" alt="Back logo." />
-//   </>
-// ) : (
-//   <>
-//     <h3 className="gridView">Grid View</h3>
-//     <Image
-//       src={GridView}
-//       className="headerIcons"
-//       alt="Grid View logo."
-//     />
-//   </>
-// )}
