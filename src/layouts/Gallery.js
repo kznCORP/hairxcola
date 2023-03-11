@@ -17,12 +17,13 @@ export const Gallery = ({ posts }) => {
 
   useMemo(() => {
     if (posts.length) {
-      setMappedServices(
-        posts.map((service) => ({
+      const sortedPosts = posts
+        .map((service) => ({
           ...service,
           mainImage: imgBuilder.image(service.mainImage),
         }))
-      );
+        .sort((a, b) => a.title.localeCompare(b.title));
+      setMappedServices(sortedPosts);
     } else {
       setMappedServices([]);
     }
