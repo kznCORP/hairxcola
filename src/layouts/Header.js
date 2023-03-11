@@ -48,6 +48,9 @@ export const Header = () => {
       <nav className="header-nav">
         <ul className="header-menu">
           <li className="header-item">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="header-item">
             <Link href="/about">About</Link>
           </li>
           <li className="header-item">
@@ -58,8 +61,9 @@ export const Header = () => {
           <li className="header-item">
             <Link href="/blog">Blog</Link>
           </li>
-          <li className="header-item">FAQ</li>
-          <li className="header-item">Contact</li>
+          <li className="header-item">
+            <Link href="/faq">FAQ</Link>
+          </li>
         </ul>
       </nav>
 

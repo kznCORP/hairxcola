@@ -9,10 +9,10 @@ import Footer from "../src/layouts/Footer";
 
 /*
  * Important
- * [x] Deploy to Vercel
+*  [ ] Purchase and link a domain.
  * [ ] When viewing from screens > 1560px, adjust padding.
- * [ ] Add links to every thing.
  * [ ] Display image when hovering over Services.
+ * [ ] Complete [slug].js for Blogs
  *
  * Extras
  * [ ] Add hover effects to horizontal scrolling

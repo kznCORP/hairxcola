@@ -12,7 +12,8 @@ export const About = () => {
           <div className="horizontal-line"></div>
 
           <div className="am-description">
-            <p className="am-paragraph">Hello, I&rsquo;m Nicola Narido.</p>
+            <p className="am-paragraph">Hello, I&rsquo;m Nicola Narido — The artist behind the chair.</p>
+            <br/>
             <p className="am-paragraph">
               I specialize in colour with all hair types for any transformation
               from dimensional sun kissed balayages to creative colour
