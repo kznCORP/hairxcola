@@ -16,19 +16,20 @@ export const Services = ({ services }) => {
 
   useMemo(() => {
     if (services.length) {
-      setMappedServices(
-        services.map((service) => ({
+      const sortedServices = services
+        .map((service) => ({
           ...service,
           mainImage: imgBuilder.image(service.mainImage),
         }))
-      );
+        .sort((a, b) => a.title.localeCompare(b.title)); // sort services alphabetically by title
+      setMappedServices(sortedServices);
     } else {
       setMappedServices([]);
     }
   }, [services, imgBuilder]);
 
   return (
-    <div className="my-services">
+    <div className="my-services" id="services">
       <h2 className="ms-title">My Services.</h2>
       <div className="horizontal-line"></div>
 
@@ -36,7 +37,6 @@ export const Services = ({ services }) => {
         {mappedServices.length ? (
           mappedServices.map((service) => (
             <div className="service" key={service._id}>
-              {/* Insert below - line of code here for Images */}
               <div className="service-name">
                 <p className="placeholder">Name</p>
                 <h3 className="service-title">{service.title}</h3>
@@ -64,15 +64,3 @@ export const Services = ({ services }) => {
 };
 
 export default Services;
-
-{
-  /*eslint-disable-next-line @next/next/no-img-element */
-}
-
-{
-  /* <img
-      src={service.mainImage}
-      alt={`${service.title} image.`}
-      className="gallery-image"
-    /> */
-}

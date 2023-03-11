@@ -1,0 +1,47 @@
+.aboutMe {
+  padding: 0 1.5em;
+}
+
+.am-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+}
+
+.am-name {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.am-paragraph {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-size: 0.925em;
+  color: #7a4b14;
+}
+
+/* Styles for Extra-Large Screens */
+@media (min-width: 992px) {
+  .aboutMe {
+    padding: 0 3em;
+  }
+
+  .am-title {
+    font-size: 2.2em;
+  }
+
+  .am-paragraph {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .am-title {
+    font-size: 2.75em;
+  }
+
+  .am-paragraph {
+    font-size: 1.1em;
+  }
+}

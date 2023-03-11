@@ -1,0 +1,33 @@
+.blogPosts {
+  padding: 0 1.5em;
+}
+
+.bp-title {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+}
+
+.bp-name {
+  font-family: "Canela Trial", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+/* Styles for Extra-Large Screens */
+@media (min-width: 992px) {
+  .blogPosts {
+    padding: 0 3em;
+  }
+
+  .bp-title {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bp-title {
+    font-size: 2.75em;
+  }
+}

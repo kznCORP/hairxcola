@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import ApplePay from "../assets/ApplePay.png";
 import Interac from "../assets/Interac.png";
@@ -9,11 +10,13 @@ import Visa from "../assets/Visa.png";
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="book-now-button">
-        <div className="book">
-          <h2 className="book-text">Book Now.</h2>
+      <Link href="https://hairxcola.square.site">
+        <div className="book-now-button">
+          <div className="book">
+            <h2 className="book-text">Book Now.</h2>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="footer-info">
         <div className="available-payments">
