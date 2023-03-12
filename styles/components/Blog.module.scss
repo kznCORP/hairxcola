@@ -15,6 +15,18 @@
   margin-bottom: 1em;
 }
 
+.bp-post {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 576px) {
+  .bp-post {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
 /* Styles for Extra-Large Screens */
 @media (min-width: 992px) {
   .blogPosts {
@@ -27,7 +39,12 @@
 }
 
 @media (min-width: 1440px) {
+  .bp-post {
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
   .bp-title {
     font-size: 2.75em;
   }
+
 }

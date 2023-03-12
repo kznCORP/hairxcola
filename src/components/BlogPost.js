@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from "next/image";
+
 export const BlogPost = ({ post }) => {
   const formattedDate = new Date(post._createdAt).toLocaleString("en-US", {
     month: "long",
@@ -21,14 +23,15 @@ export const BlogPost = ({ post }) => {
 
       <div className="post-media">
         <div className="post-image-wrapper">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={post.mainImage}
+          <Image
+            src={post.mainImage.url()}
             alt={`${post.title} image.`}
+            width={450}
+            height={450}
+            loading="lazy"
             className="post-image"
           />
         </div>
-
         <div className="post-link">
           <div className="post-button">
             <div className="btn">Learn More</div>

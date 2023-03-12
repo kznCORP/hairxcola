@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from "react";
 import SanityImageURLBuilder from "@sanity/image-url";
+import Image from "next/image";
 
 export const Gallery = ({ posts }) => {
   const [mappedServices, setMappedServices] = useState([]);
@@ -58,10 +59,12 @@ export const Gallery = ({ posts }) => {
           mappedServices.map((service) => (
             <div className="gallery-horizontal" key={service._id}>
               <div className="gallery-img-wrapper">
-                {/*eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={service.mainImage}
+                <Image
+                  src={service.mainImage.url()}
                   alt={`${service.title} image.`}
+                  width={450}
+                  height={450}
+                  loading="lazy"
                   className="gallery-image"
                 />
               </div>

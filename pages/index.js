@@ -8,11 +8,13 @@ import Slogan from "../src/layouts/Slogan";
 import Footer from "../src/layouts/Footer";
 
 /*
- * Important
-*  [ ] Purchase and link a domain.
+ * To Do
+ * [ ] Purchase and link a domain.
  * [ ] When viewing from screens > 1560px, adjust padding.
  * [ ] Display image when hovering over Services.
- * [ ] Complete [slug].js for Blogs
+ *
+ * Important
+ * [ ] Complete /blog/[slug].js
  *
  * Extras
  * [ ] Add hover effects to horizontal scrolling
