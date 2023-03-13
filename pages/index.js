@@ -11,7 +11,6 @@ import Footer from "../src/layouts/Footer";
  * To Do
  * [ ] Purchase and link a domain.
  * [ ] When viewing from screens > 1560px, adjust padding.
- * [ ] Display image when hovering over Services.
  *
  * Important
  * [ ] Implement SanityBlockContent in /blog/[slug].js
