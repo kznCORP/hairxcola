@@ -14,7 +14,7 @@ import Footer from "../src/layouts/Footer";
  * [ ] Display image when hovering over Services.
  *
  * Important
- * [ ] Complete /blog/[slug].js
+ * [ ] Implement SanityBlockContent in /blog/[slug].js
  *
  * Extras
  * [ ] Add hover effects to horizontal scrolling

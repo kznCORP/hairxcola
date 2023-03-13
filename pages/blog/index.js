@@ -39,7 +39,7 @@ export const BlogPage = ({ blogPosts }) => {
       <Header />
       <div className="blogPosts">
         <div className="bp-container">
-          <h2 className="bp-title">Blogs.</h2>
+          <h2 className="bp-title">Latest Blog Posts.</h2>
           <div className="horizontal-line"></div>
 
           <div className="bp-post">

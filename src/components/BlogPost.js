@@ -1,6 +1,6 @@
 import React from "react";
-
 import Image from "next/image";
+import Link from "next/link";
 
 export const BlogPost = ({ post }) => {
   const formattedDate = new Date(post._createdAt).toLocaleString("en-US", {
@@ -32,11 +32,14 @@ export const BlogPost = ({ post }) => {
             className="post-image"
           />
         </div>
-        <div className="post-link">
-          <div className="post-button">
-            <div className="btn">Learn More</div>
+
+        <Link href={`/blog/${post.slug.current}`}>
+          <div className="post-link">
+            <div className="post-button">
+              <div className="btn">Learn More</div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

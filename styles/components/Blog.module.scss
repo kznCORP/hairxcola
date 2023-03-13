@@ -40,11 +40,9 @@
 
 @media (min-width: 1440px) {
   .bp-post {
-    grid-gap: 15px;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
   .bp-title {
     font-size: 2.75em;
   }
-
 }
