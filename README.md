@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Studio Narido
 
-## Getting Started
+Welcome to the official website of [Studio Narido](hairxcola.vercel.app), a professional hair stylist with years of experience in the industry. This website was built with Next.js, a powerful React framework that allows for easy server-side rendering and seamless deployment. The website is fully responsive and works on all devices.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Next.js](https://nextjs.org/) for front-end development
+- [Sanity Headless CMS](https://www.sanity.io/) for content management
+- [Sass](https://sass-lang.com/) for styling
+- [Figma](https://www.figma.com/) for prototyping
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This website includes the following features:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- A landing page with an introduction to the stylist and their services.
+- A gallery of the stylist's work.
+- A page with the stylist's biography and background.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Design
 
-## Learn More
+The website was designed using Figma, a collaborative interface design tool. The design features a clean and modern look with an emphasis on showcasing the stylist's work. The color palette was chosen to reflect the stylist's branding and to create a cohesive look throughout the website.
 
-To learn more about Next.js, take a look at the following resources:
+## Content Management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website's content is managed using Sanity Headless CMS. This allows the stylist to easily update the website with new content, such as photos of their latest work or updates to their biography.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Styling
 
-## Deploy on Vercel
+The website's styling was done using Sass, a powerful CSS preprocessor. Sass allows for easy customization of the website's styles and ensures consistency throughout the website.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The website is deployed using [Vercel](https://vercel.com/), a cloud platform for static sites and serverless functions. Vercel provides fast and reliable deployment, as well as automatic SSL encryption for secure browsing.
+
+## Conclusion
+
+This website showcases the stylist's work and provides an easy way for clients to get in touch. The use of modern technologies such as Next.js, Sanity Headless CMS, and Sass ensures a fast and reliable website that is easy to maintain.
