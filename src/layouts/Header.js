@@ -71,7 +71,7 @@ export const Header = () => {
         <div className="header-slogan">
           <p className="available">Available Now</p>
           <Link href="https://hairxcola.square.site">
-            <p className="header-book">Book for April Appointments Here.</p>
+            <p className="header-book">Book for June/July Appointments Here.</p>
           </Link>
         </div>
       )}
